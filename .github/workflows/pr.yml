@@ -38,7 +38,7 @@ jobs:
         run: echo DOCKER_TAG=$(echo pr-${GITHUB_SHA:0:8}) >> $GITHUB_ENV
 
       - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@a0b8f0e2d777562c13523b9a4d9480bae383486b
+        uses: elgohr/Publish-Docker-Github-Action@2ce5b28a6e2c5bd9d9eb2eddfd149013c5a0c9e8
         env:
           RELEASE_VERSION: '${{ env.DOCKER_TAG }}'
         with:
